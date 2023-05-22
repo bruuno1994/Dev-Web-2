@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 03 - Introdução ao Vue</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ titulo }}</h1>
+        <p>{{ msg }} </p>
+        <h2>Olá {{ nome }}, você está logado</h2>
+        <p>{{ testFunc() }}</p>
+        <p>A soma dos dois valores é igual a: {{ resultado_soma }}</p>
+        <input type="text"  v-model="nome"><br>
+        <input type="number"  v-model="x"><br>
+        <input type="number"  v-model="y"><br>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>

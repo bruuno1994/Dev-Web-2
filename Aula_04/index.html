@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 04 - V-bind e V-on</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="app">
+        <h1 v-once>Trabalhando com {{ titulo }}</h1>
+        <a v-bind:href="link">Google</a>
+        <h1>Trabalhando com V-on</h1>
+            <input type="text" v-label="titulo" v-model="caixaTexto"><br><br>
+              <button v-on:click="alterarValor">Enviar</button><br><br>
+                 <span>{{ titulo }}</span><br>
+        
+        <h1>Soma</h1>
+            <p>Numero 1:</p><br>
+            <input type="text" v-model="numero1">
+
+            <p>Numero 2:</p><br>
+            <input type="text" v-model="numero2"><br><br>
+
+            <button @click="soma">Somar</button><br><br>
+
+            <span>O resultado da soma é: {{resultado}}</span><br><br>
+
+        <h1>Subtração</h1>
+            <p>Numero 1:</p><br>
+            <input type="text" v-model="numero1">
+
+            <p>Numero 2:</p><br>
+            <input type="text" v-model="numero2"><br><br>
+
+            <button @click="subtrair">Subtrair</button><br><br>
+
+            <span>O resultado da subtração é: {{resultado}}</span><br><br>
+
+        <h1>Multiplicação</h1>
+            <p>Numero 1:</p><br>
+            <input type="text" v-model="numero1">
+
+            <p>Numero 2:</p><br>
+            <input type="text" v-model="numero2"><br><br>
+
+            <button @click="multiplicar">Multiplicar</button><br><br>
+
+            <span>O resultado da multiplicação é: {{resultado}}</span><br><br>
+
+        <h1>Divisão</h1>
+            <p>Numero 1:</p><br>
+            <input type="text" v-model="numero1">
+
+            <p>Numero 2:</p><br>
+            <input type="text" v-model="numero2"><br><br>
+
+            <button @click="dividir">Dividir</button><br><br>
+
+            <span>O resultado da divisão é: {{resultado}}</span><br><br>
+
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
